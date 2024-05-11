@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: white;
+  color: #313131;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: white;
+  background-color: #ca3e47;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dice-logo {
+  height: 50px;
+}
+
+/* dice */
+
+.die {
+  font-size: 10em;
+  padding: 0.25em;
+  color: #ca3e47;
+}
+
+.die-shaking {
+  animation-name: wobble;
+  animation-duration: 1s;
+}
+
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* roll-dice */
+
+.roll-dice {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.roll-dice-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.roll-dice button {
+  width: 15em;
+  padding: 1.5em;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  background-color: #313131;
+  margin-top: 3em;
+  align-self: center;
+}
+
+.roll-dice button:hover {
+  cursor: pointer;
+}
+
+.roll-dice-rolling {
+  border: 0px;
+  border-radius: 10px;
+  background-color: #ca3e47 !important;
+  opacity: 0.5;
+}
