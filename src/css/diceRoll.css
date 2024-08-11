@@ -18,10 +18,12 @@
   background-color: #313131;
   margin-top: 3em;
   align-self: center;
+  transition: 0.3s;
 }
 
 .roll-dice button:hover {
   cursor: pointer;
+  transform: scale(110%) rotate(-2deg);
 }
 
 .roll-dice-rolling {
