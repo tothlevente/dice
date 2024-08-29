@@ -1,4 +1,5 @@
 import { Component, ReactNode } from "react";
+
 import Dice from "./Dice";
 import DiceProps from "../interfaces/DiceProps";
 import SidesProps from "../interfaces/SidesProps";
@@ -13,6 +14,7 @@ export default class DiceRoll extends Component<SidesProps, DiceProps> {
 
     this.state = {
       dice: 1,
+      color: "black",
       rolling: false,
     };
 
@@ -34,12 +36,12 @@ export default class DiceRoll extends Component<SidesProps, DiceProps> {
 
   render(): ReactNode {
     const handleBtn = this.state.rolling ? "roll-dice-rolling" : "";
-    const { dice, rolling } = this.state;
+    const { dice, color, rolling } = this.state;
 
     return (
       <div className="roll-dice">
         <div className="roll-dice-container">
-          <Dice dice={dice} rolling={rolling} />
+          <Dice dice={dice} color={color} rolling={rolling} />
         </div>
         <button className={handleBtn} disabled={this.state.rolling} onClick={this.roll}>
           {this.state.rolling ? (

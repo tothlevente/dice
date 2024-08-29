@@ -2,18 +2,18 @@ import DiceRoll from "./components/DiceRoll";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-import { Component, ReactNode } from "react";
+import { useState } from "react";
 
-export default class App extends Component {
-  render(): ReactNode {
-    return (
-      <div className="site-wrapper">
-        <Header />
-        <main>
-          <DiceRoll />
-        </main>
-        <Footer />
-      </div>
-    );
-  }
+export default function App() {
+  const [color, setColor] = useState("#000");
+
+  return (
+    <div className="site-wrapper">
+      <Header color={color} setColor={setColor} />
+      <main>
+        <DiceRoll />
+      </main>
+      <Footer />
+    </div>
+  );
 }
