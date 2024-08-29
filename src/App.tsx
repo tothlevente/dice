@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [color, setColor] = useState("#000");
+  const [color, setColor] = useState(localStorage.getItem("color") || "#000");
   const [rolling, setRolling] = useState(false);
   const [dice, setDice] = useState(1);
 

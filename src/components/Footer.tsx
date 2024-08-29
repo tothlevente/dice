@@ -4,9 +4,12 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-text">
-        <p>Created by Levente in 2024</p>
-        <p>This project (website) under MIT license, ad-free and does not use cookies.</p>
+        <p>
+          This website under MIT license, ad-free and does not use cookies only local storage for
+          save a dice color.
+        </p>
         <p>For more information please visit the project repository.</p>
+        <p>Created by Levente in 2024</p>
         <p>v{packageJson.version}</p>
       </div>
       <div>
