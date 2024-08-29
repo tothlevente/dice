@@ -1,4 +1,5 @@
 import { Component, ReactNode } from "react";
+import packageJson from "../../package.json";
 
 export default class Footer extends Component {
   render(): ReactNode {
@@ -8,6 +9,7 @@ export default class Footer extends Component {
           <p>Created by Levente in 2024</p>
           <p>This project (website) under MIT license, ad-free and does not use cookies.</p>
           <p>For more information please visit the project repository.</p>
+          <p>v{packageJson.version}</p>
         </div>
         <div>
           <a
