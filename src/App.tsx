@@ -1,17 +1,32 @@
-import DiceRoll from "./components/DiceRoll";
+import DiceRolling from "./components/DiceRolling";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const [color, setColor] = useState("#000");
+  const [rolling, setRolling] = useState(false);
+  const [dice, setDice] = useState(1);
+
+  function handleRoll() {
+    setRolling(true);
+    setDice(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
+
+    setTimeout(() => {
+      setRolling(false);
+    }, 1000);
+  }
+
+  useEffect(() => {
+    setDice(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
+  }, [setDice]);
 
   return (
     <div className="site-wrapper">
       <Header color={color} setColor={setColor} />
       <main>
-        <DiceRoll />
+        <DiceRolling dice={dice} rolling={rolling} color={color} handleRoll={handleRoll} />
       </main>
       <Footer />
     </div>
