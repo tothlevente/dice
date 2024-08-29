@@ -15,7 +15,7 @@
   border: 0px;
   border-radius: 10px;
   color: white;
-  background-color: #313131;
+  background-color: black;
   margin-top: 3em;
   align-self: center;
   transition: 0.3s;
@@ -24,6 +24,7 @@
 .roll-dice button:hover {
   cursor: pointer;
   transform: scale(110%) rotate(-2deg);
+  background-color: #313131;
 }
 
 .roll-dice-rolling {
