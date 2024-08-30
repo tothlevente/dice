@@ -4,6 +4,14 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 import { useEffect, useState } from "react";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@emotion/react";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+  },
+});
 
 export default function App() {
   const [color, setColor] = useState(localStorage.getItem("color") || "#000");
@@ -31,13 +39,15 @@ export default function App() {
   }, [setShowNoticeDialog]);
 
   return (
-    <div className="site-wrapper">
-      <Header color={color} setColor={setColor} />
-      <main>
-        <NoticeDialog open={showNoticeDialog} setOpen={setShowNoticeDialog} />
-        <DiceRolling dice={dice} rolling={rolling} color={color} handleRoll={handleRoll} />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="site-wrapper">
+        <Header color={color} setColor={setColor} />
+        <main>
+          <NoticeDialog open={showNoticeDialog} setOpen={setShowNoticeDialog} />
+          <DiceRolling dice={dice} rolling={rolling} color={color} handleRoll={handleRoll} />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
