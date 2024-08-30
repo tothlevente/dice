@@ -16,7 +16,8 @@ export default function NoticeDialog({ open, setOpen }: any) {
       <DialogTitle sx={{ fontSize: "24px", fontWeight: "bold" }}>Hi there! 👋</DialogTitle>
       <DialogContent>
         <Typography sx={{ marginBottom: 2 }}>
-          This website under MIT license, ad-free and does not use cookies only local storage for save a dice color and manages dialogs to improve your experience.
+          This website under MIT license, ad-free and does not use cookies only local storage for save a dice color and manages dialogs to improve your experience. You
+          accept this when you use the website.
         </Typography>
         <Typography>Thank you for visiting!</Typography>
       </DialogContent>
