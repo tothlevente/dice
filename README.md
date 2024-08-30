@@ -35,8 +35,9 @@ Your app is ready to be deployed!
 
 ## Used external sources:
 
-- [GeeksForGeeks](https://www.geeksforgeeks.org/dice-rolling-app-using-reactjs/)
+- [Material UI](https://mui.com/material-ui/)
 - [Bootstrap Icons](https://icons.getbootstrap.com)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/dice-rolling-app-using-reactjs/)
 
 ## Learn more:
 
