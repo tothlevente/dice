@@ -1,4 +1,4 @@
-# Dice 🎲
+# Dice :game_die:
 
 This is the digital version of the traditional dice.
 
