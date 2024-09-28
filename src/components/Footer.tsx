@@ -1,25 +1,54 @@
 import packageJson from "../../package.json";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="footer-text">
-        <p>
-          This website is under MIT license, ad-free and does not use cookies only local storage for save a dice color and manages dialogs to improve your experience.
-        </p>
-        <p>You accept this when you use the website.</p>
-        <p>For more information please visit the project repository.</p>
-        <p>Created by Levente in 2024</p>
-        <p>v{packageJson.version}</p>
-      </div>
-      <div>
-        <a className="link" target="_blank" rel="noreferrer" href="https://github.com/tothlevente">
-          <i className="bi bi-person-circle"></i>
-        </a>
-        <a className="link" target="_blank" rel="noreferrer" href="https://github.com/tothlevente/dice">
-          <i className="bi bi-github"></i>
-        </a>
-      </div>
-    </footer>
+    <AppBar
+      position="fixed"
+      color="primary"
+      sx={{ top: "auto", bottom: 0 }}
+    >
+      <Toolbar className="footer">
+        <Box
+          sx={{
+            flex: 1,
+            flexGrow: 1,
+            margin: "20px",
+            fontSize: "small",
+            textAlign: "center",
+          }}
+        >
+          <Box
+            sx={{
+              fontSize: "small",
+            }}
+          >
+            <Typography className="typography">
+              This website is under MIT license, ad-free and does not use
+              cookies only local storage for save a dice color and manages
+              dialogs to improve your experience.
+            </Typography>
+            <Typography className="typography">
+              For more information please visit the project repository.
+            </Typography>
+            <Typography className="typography">
+              Created by Levente in 2024 | v{packageJson.version}
+            </Typography>
+          </Box>
+          <Box>
+            <a
+              className="link"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/tothlevente/dice"
+            >
+              <GitHubIcon />
+            </a>
+          </Box>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
