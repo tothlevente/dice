@@ -18,6 +18,9 @@ export default function Footer() {
             margin: "20px",
             display: "flex",
             justifyContent: "space-between",
+            "@media (max-width: 600px)": {
+              display: "grid",
+            },
           }}
         >
           <Box
@@ -48,18 +51,27 @@ export default function Footer() {
               alignContent: "center",
               justifyItems: "end",
               maxWidth: "700px",
+              "@media (max-width: 600px)": {
+                justifyItems: "start",
+              },
             }}
           >
             <Box
               sx={{
                 display: "grid",
                 justifyItems: "end",
+                "@media (max-width: 600px)": {
+                  justifyItems: "start",
+                },
               }}
             >
               <Button
                 className="button"
                 variant="text"
                 startIcon={<OpenInNewIcon />}
+                size="small"
+                target="_blank"
+                href="https://github.com/tothlevente/dice"
               >
                 Repository
               </Button>
@@ -67,6 +79,9 @@ export default function Footer() {
                 className="button"
                 variant="text"
                 startIcon={<OpenInNewIcon />}
+                size="small"
+                target="_blank"
+                href="https://github.com/tothlevente/dice/blob/main/LICENSE"
               >
                 License
               </Button>

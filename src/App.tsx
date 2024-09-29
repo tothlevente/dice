@@ -64,15 +64,8 @@ export default function App() {
           />
           <Paper
             elevation={0}
-            square
             sx={{
-              pb: "150px",
-              "@media (max-width: 459px)": {
-                pb: "200px",
-              },
-              "@media (max-width: 349px)": {
-                pb: "300px",
-              },
+              height: 800,
               bgcolor: "#f2f2f2",
             }}
           >
