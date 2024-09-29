@@ -1,7 +1,7 @@
 import packageJson from "../../package.json";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 
 export default function Footer() {
   return (
@@ -16,12 +16,16 @@ export default function Footer() {
             flex: 1,
             flexGrow: 1,
             margin: "20px",
-            fontSize: "small",
-            textAlign: "center",
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
           <Box
             sx={{
+              display: "grid",
+              alignItems: "center",
+              alignContent: "center",
+              maxWidth: "700px",
               fontSize: "small",
             }}
           >
@@ -37,15 +41,44 @@ export default function Footer() {
               Created by Levente in 2024 | v{packageJson.version}
             </Typography>
           </Box>
-          <Box>
-            <a
-              className="link"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/tothlevente/dice"
+          <Box
+            sx={{
+              display: "grid",
+              alignItems: "center",
+              alignContent: "center",
+              justifyItems: "end",
+              maxWidth: "700px",
+            }}
+          >
+            <Box
+              sx={{
+                display: "grid",
+                justifyItems: "end",
+              }}
             >
-              <GitHubIcon />
-            </a>
+              <Button
+                className="button"
+                variant="text"
+                startIcon={<OpenInNewIcon />}
+              >
+                Repository
+              </Button>
+              <Button
+                className="button"
+                variant="text"
+                startIcon={<OpenInNewIcon />}
+              >
+                License
+              </Button>
+            </Box>
+            <Box sx={{ paddingTop: "15px" }}>
+              <a href="https://www.netlify.com">
+                <img
+                  src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg"
+                  alt="Deploys by Netlify"
+                />
+              </a>
+            </Box>
           </Box>
         </Box>
       </Toolbar>

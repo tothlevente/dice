@@ -4,12 +4,12 @@
     margin: 5px;
   }
 
-  .link {
-    margin: 10px;
+  .button {
+    font-size: small;
     color: #fafafa;
   }
 
-  .link:hover {
+  .button:hover {
     color: #ffc107;
   }
 }
