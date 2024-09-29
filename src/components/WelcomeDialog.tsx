@@ -1,3 +1,4 @@
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -26,7 +27,7 @@ export default function WelcomeDialog({
     <Dialog
       open={openWelcomeDialog}
       onClose={handleClose}
-      maxWidth={"sm"}
+      maxWidth={"md"}
       sx={{ borderRadius: "10px", textAlign: "center" }}
       fullWidth
     >
@@ -55,6 +56,26 @@ export default function WelcomeDialog({
         <Typography sx={{ marginBottom: "5px" }}>
           For more information please visit the project repository.
         </Typography>
+        <Button
+          className="button"
+          variant="text"
+          startIcon={<OpenInNewIcon />}
+          size="small"
+          target="_blank"
+          href="https://github.com/tothlevente/dice"
+        >
+          Repository
+        </Button>
+        <Button
+          className="button"
+          variant="text"
+          startIcon={<OpenInNewIcon />}
+          size="small"
+          target="_blank"
+          href="https://github.com/tothlevente/dice/blob/main/LICENSE"
+        >
+          License
+        </Button>
         <Typography sx={{ marginTop: "20px" }}>
           Thank you for visiting!
         </Typography>
