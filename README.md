@@ -1,4 +1,4 @@
-# Dice 🎲
+# Dice :game_die:
 
 This is the digital version of the traditional dice.
 
@@ -6,7 +6,7 @@ This is the digital version of the traditional dice.
 
 In the project directory, you can run:
 
-- `npm run dev`
+- `npm run start`
 - `npm run lint`
 - `npm run preview`
 - `npm run build`
