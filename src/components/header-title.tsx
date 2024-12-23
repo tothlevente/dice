@@ -1,9 +1,9 @@
-import Dice6 from "./icons/dice-6";
+import Dices from "./icons/dices";
 
 export default function HeaderTitle() {
   return (
     <div className="header-title">
-      <Dice6 />
+      <Dices />
       <p>Dice</p>
     </div>
   );
