@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.header-title {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title > p {
+  margin-left: 5px;
+  font-weight: bold;
+}
