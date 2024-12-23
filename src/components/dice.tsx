@@ -1,13 +1,13 @@
+import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from "./render-dice";
+
 import DiceProps from "@/interfaces/DiceProps";
 
-import Dice1 from "./icons/dice-1";
-import Dice2 from "./icons/dice-2";
-import Dice3 from "./icons/dice-3";
-import Dice4 from "./icons/dice-4";
-import Dice5 from "./icons/dice-5";
-import Dice6 from "./icons/dice-6";
-
-export default function Dice({ side, color, rolling }: DiceProps) {
+export default function Dice({
+  side,
+  color,
+  rolling,
+  variant,
+}: DiceProps) {
   const width = 200;
   const height = 200;
 
@@ -16,6 +16,7 @@ export default function Dice({ side, color, rolling }: DiceProps) {
       case 1:
         return (
           <Dice1
+            variant={variant}
             width={width}
             height={height}
           />
@@ -23,6 +24,7 @@ export default function Dice({ side, color, rolling }: DiceProps) {
       case 2:
         return (
           <Dice2
+            variant={variant}
             width={width}
             height={height}
           />
@@ -30,6 +32,7 @@ export default function Dice({ side, color, rolling }: DiceProps) {
       case 3:
         return (
           <Dice3
+            variant={variant}
             width={width}
             height={height}
           />
@@ -37,6 +40,7 @@ export default function Dice({ side, color, rolling }: DiceProps) {
       case 4:
         return (
           <Dice4
+            variant={variant}
             width={width}
             height={height}
           />
@@ -44,6 +48,7 @@ export default function Dice({ side, color, rolling }: DiceProps) {
       case 5:
         return (
           <Dice5
+            variant={variant}
             width={width}
             height={height}
           />
@@ -51,6 +56,7 @@ export default function Dice({ side, color, rolling }: DiceProps) {
       case 6:
         return (
           <Dice6
+            variant={variant}
             width={width}
             height={height}
           />

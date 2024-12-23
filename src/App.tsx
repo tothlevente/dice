@@ -1,4 +1,5 @@
 import { ThemeProvider } from "./components/theme-provider";
+import { variant } from "./components/render-dice";
 import { useEffect, useState } from "react";
 
 import Footer from "./components/contents/Footer";
@@ -7,6 +8,7 @@ import Board from "./components/contents/Board";
 
 export default function App() {
   const [rollingDice, setRollingDice] = useState(false);
+  const [diceVariant, setDiceVariant] = useState<variant>("filled");
   const [diceColor, setDiceColor] = useState("");
   const [diceSide, setDiceSide] = useState(1);
 
@@ -35,6 +37,7 @@ export default function App() {
           rolling={rollingDice}
           color={diceColor}
           handleRoll={handleRoll}
+          variant={diceVariant}
         />
         <Footer />
       </div>
