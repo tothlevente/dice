@@ -1,5 +1,7 @@
 @import url("header.css");
 @import url("footer.css");
+@import url("board.css");
+@import url("shaking.css");
 
 @tailwind base;
 @tailwind components;
@@ -88,12 +90,6 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-    }
-  }
-
-  .board {
-    @media only screen and (min-width: 800px) {
-      flex: 1;
     }
   }
 }

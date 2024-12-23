@@ -1,0 +1,13 @@
+.board {
+  @media only screen and (min-width: 800px) {
+    flex: 1;
+  }
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}

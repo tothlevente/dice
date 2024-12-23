@@ -1,6 +1,6 @@
 import DiceIconProps from "@/interfaces/DiceIconProps";
 
-export default function Dice6({ width, height }: DiceIconProps) {
+export default function Dice2({ width, height }: DiceIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +12,7 @@ export default function Dice6({ width, height }: DiceIconProps) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-dice-6"
+      className="lucide lucide-dice-2"
     >
       <rect
         width="18"
@@ -22,12 +22,8 @@ export default function Dice6({ width, height }: DiceIconProps) {
         rx="2"
         ry="2"
       />
-      <path d="M16 8h.01" />
-      <path d="M16 12h.01" />
-      <path d="M16 16h.01" />
-      <path d="M8 8h.01" />
-      <path d="M8 12h.01" />
-      <path d="M8 16h.01" />
+      <path d="M15 9h.01" />
+      <path d="M9 15h.01" />
     </svg>
   );
 }
