@@ -1,4 +1,4 @@
-import { variant } from "../render-dice";
+import { Variant } from "../render-dice";
 import { Button } from "../ui/button";
 
 import Dice from "../dice";
@@ -13,7 +13,7 @@ export default function Board({
   side: number;
   rolling: boolean;
   color: string;
-  variant: variant;
+  variant: Variant;
   handleRoll: () => void;
 }) {
   return (

@@ -12,7 +12,7 @@ import Dice_4_Fill from "./icons/Dice-4-fill";
 import Dice_5_Fill from "./icons/Dice-5-fill";
 import Dice_6_Fill from "./icons/Dice-6-fill";
 
-export type variant = "outline" | "filled";
+export type Variant = "outline" | "filled";
 
 export function Dice1({
   width,
@@ -21,7 +21,7 @@ export function Dice1({
 }: {
   width: number;
   height: number;
-  variant: variant;
+  variant: Variant;
 }) {
   if (variant === "filled") {
     return (
@@ -47,7 +47,7 @@ export function Dice2({
 }: {
   width: number;
   height: number;
-  variant: variant;
+  variant: Variant;
 }) {
   if (variant === "filled") {
     return (
@@ -73,7 +73,7 @@ export function Dice3({
 }: {
   width: number;
   height: number;
-  variant: variant;
+  variant: Variant;
 }) {
   if (variant === "filled") {
     return (
@@ -99,7 +99,7 @@ export function Dice4({
 }: {
   width: number;
   height: number;
-  variant: variant;
+  variant: Variant;
 }) {
   if (variant === "filled") {
     return (
@@ -125,7 +125,7 @@ export function Dice5({
 }: {
   width: number;
   height: number;
-  variant: variant;
+  variant: Variant;
 }) {
   if (variant === "filled") {
     return (
@@ -151,7 +151,7 @@ export function Dice6({
 }: {
   width: number;
   height: number;
-  variant: variant;
+  variant: Variant;
 }) {
   if (variant === "filled") {
     return (
