@@ -1,7 +1,7 @@
 @import url("header.css");
 @import url("footer.css");
-@import url("board.css");
-@import url("shaking.css");
+@import url("rolling.css");
+@import url("containers.css");
 
 @tailwind base;
 @tailwind components;
@@ -86,10 +86,22 @@
   }
 
   .wrapper {
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 280px) {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+    }
+  }
+
+  .board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 280px) {
+      flex: 1;
     }
   }
 }

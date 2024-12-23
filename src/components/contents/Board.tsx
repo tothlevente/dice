@@ -1,13 +1,15 @@
 import Dice from "../dice";
 
+import { Button } from "../ui/button";
+
 export default function Board({
   side,
-  shaking,
+  rolling,
   color,
   handleRoll,
 }: {
   side: number;
-  shaking: boolean;
+  rolling: boolean;
   color: string;
   handleRoll: () => void;
 }) {
@@ -16,9 +18,16 @@ export default function Board({
       <div className="dice-container">
         <Dice
           side={side}
-          shaking={shaking}
+          rolling={rolling}
           color={color}
         />
+        <div className="button-container">
+          {rolling ? (
+            <Button disabled>Rolling...</Button>
+          ) : (
+            <Button onClick={() => handleRoll()}>Roll a dice!</Button>
+          )}
+        </div>
       </div>
     </div>
   );

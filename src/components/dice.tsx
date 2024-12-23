@@ -7,9 +7,9 @@ import Dice4 from "./icons/dice-4";
 import Dice5 from "./icons/dice-5";
 import Dice6 from "./icons/dice-6";
 
-export default function Dice({ side, color, shaking }: DiceProps) {
-  const width = 85;
-  const height = 85;
+export default function Dice({ side, color, rolling }: DiceProps) {
+  const width = 200;
+  const height = 200;
 
   function renderSwitch(index: number) {
     switch (index) {
@@ -61,7 +61,7 @@ export default function Dice({ side, color, shaking }: DiceProps) {
   return (
     <div
       style={{ color: color }}
-      className={`"dice" ${shaking && "shaking"}`}
+      className={`"dice" ${rolling && "rolling"}`}
     >
       {renderSwitch(side)}
     </div>

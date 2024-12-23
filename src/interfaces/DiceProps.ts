@@ -1,5 +1,5 @@
 export default interface DiceProps {
   side: number;
-  shaking: boolean;
+  rolling: boolean;
   color?: string;
 }
