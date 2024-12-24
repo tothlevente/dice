@@ -12,11 +12,12 @@ export default function VariantToggle({
   setVariant: React.Dispatch<React.SetStateAction<Variant>>;
 }) {
   return (
-    <div className="variant-container">
+    <>
       {variant === "filled" ? (
         <Button
           variant="outline"
           size="icon"
+          className="h-4 w-4"
           onClick={() => {
             setVariant("outline");
             localStorage.setItem("dice-variant", "outline");
@@ -28,6 +29,7 @@ export default function VariantToggle({
         <Button
           variant="outline"
           size="icon"
+          className="h-4 w-4"
           onClick={() => {
             setVariant("filled");
             localStorage.setItem("dice-variant", "filled");
@@ -36,6 +38,6 @@ export default function VariantToggle({
           <DiamondPlus />
         </Button>
       )}
-    </div>
+    </>
   );
 }

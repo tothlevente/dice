@@ -13,11 +13,3 @@
   padding-right: 55px;
   padding-left: 55px;
 }
-
-.header-container {
-  display: flex;
-}
-
-.variant-container > Button {
-  margin-right: 5px;
-}
