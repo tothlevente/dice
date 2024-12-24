@@ -1,10 +1,11 @@
 import { ThemeProvider } from "./components/theme-provider";
-import { Variant } from "./components/render-dice";
 import { useEffect, useState } from "react";
 
 import Footer from "./components/contents/Footer";
 import Header from "./components/contents/Header";
 import Board from "./components/contents/Board";
+
+export type Variant = "outline" | "filled";
 
 export default function App() {
   const [rollingDice, setRollingDice] = useState(false);

@@ -1,4 +1,9 @@
-import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from "./render-dice";
+import Dice1 from "./icons/dice-1";
+import Dice2 from "./icons/dice-2";
+import Dice3 from "./icons/dice-3";
+import Dice4 from "./icons/dice-4";
+import Dice5 from "./icons/dice-5";
+import Dice6 from "./icons/dice-6";
 
 import DiceProps from "@/interfaces/DiceProps";
 
