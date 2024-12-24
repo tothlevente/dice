@@ -1,7 +1,7 @@
-import { Variant } from "../render-dice";
 import { Button } from "../ui/button";
 
 import Dice from "../dice";
+import { Variant } from "@/App";
 
 export default function Board({
   side,

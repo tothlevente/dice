@@ -1,8 +1,8 @@
 import DiamondPlus from "./icons/diamond-plus";
 import Diamond from "./icons/diamond";
 
-import { Variant } from "./render-dice";
 import { Button } from "./ui/button";
+import { Variant } from "@/App";
 
 export default function VariantToggle({
   variant,

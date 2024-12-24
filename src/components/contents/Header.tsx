@@ -2,7 +2,7 @@ import VariantToggle from "../variant-toggle";
 import HeaderTitle from "../header-title";
 
 import { ModeToggle } from "../mode-toggle";
-import { Variant } from "../render-dice";
+import { Variant } from "@/App";
 
 export default function Header({
   variant,
