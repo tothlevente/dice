@@ -1,16 +1,19 @@
-import Dice from "../dice";
-
 import { Button } from "../ui/button";
+
+import Dice from "../dice";
+import { Variant } from "@/App";
 
 export default function Board({
   side,
   rolling,
   color,
+  variant,
   handleRoll,
 }: {
   side: number;
   rolling: boolean;
   color: string;
+  variant: Variant;
   handleRoll: () => void;
 }) {
   return (
@@ -20,6 +23,7 @@ export default function Board({
           side={side}
           rolling={rolling}
           color={color}
+          variant={variant}
         />
         <div className="button-container">
           {rolling ? (

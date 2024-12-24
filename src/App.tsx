@@ -5,9 +5,16 @@ import Footer from "./components/contents/Footer";
 import Header from "./components/contents/Header";
 import Board from "./components/contents/Board";
 
+export type Variant = "outline" | "filled";
+
 export default function App() {
   const [rollingDice, setRollingDice] = useState(false);
-  const [diceColor, setDiceColor] = useState("");
+  const [diceVariant, setDiceVariant] = useState<Variant>(
+    () => (localStorage.getItem("dice-variant") as Variant) || "outline"
+  );
+  const [diceColor, setDiceColor] = useState(
+    () => (localStorage.getItem("dice-color") as string) || ""
+  );
   const [diceSide, setDiceSide] = useState(1);
 
   useEffect(() => {
@@ -29,12 +36,18 @@ export default function App() {
       storageKey="vite-ui-theme"
     >
       <div className="wrapper">
-        <Header />
+        <Header
+          variant={diceVariant}
+          setVariant={setDiceVariant}
+          color={diceColor}
+          setColor={setDiceColor}
+        />
         <Board
           side={diceSide}
           rolling={rollingDice}
           color={diceColor}
           handleRoll={handleRoll}
+          variant={diceVariant}
         />
         <Footer />
       </div>
