@@ -1,5 +1,6 @@
 import VariantToggle from "../variant-toggle";
 import HeaderTitle from "../header-title";
+import ColorToggle from "../color-toggle";
 
 import { ModeToggle } from "../mode-toggle";
 import { Variant } from "@/App";
@@ -19,6 +20,10 @@ export default function Header({
     <div className="header">
       <HeaderTitle />
       <div className="header-container">
+        <ColorToggle
+          color={color}
+          setColor={setColor}
+        />
         <VariantToggle
           variant={variant}
           setVariant={setVariant}
