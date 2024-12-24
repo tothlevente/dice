@@ -17,7 +17,7 @@ export default function VariantToggle({
         <Button
           variant="outline"
           size="icon"
-          className="h-4 w-4"
+          className="header-button"
           onClick={() => {
             setVariant("outline");
             localStorage.setItem("dice-variant", "outline");
@@ -29,7 +29,7 @@ export default function VariantToggle({
         <Button
           variant="outline"
           size="icon"
-          className="h-4 w-4"
+          className="header-button"
           onClick={() => {
             setVariant("filled");
             localStorage.setItem("dice-variant", "filled");

@@ -20,9 +20,9 @@ export default function ColorToggle({
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          className="h-4 w-4"
           size="icon"
           variant="outline"
+          className="header-button"
         >
           <SwatchBook />
         </Button>
