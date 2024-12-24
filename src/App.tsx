@@ -12,7 +12,9 @@ export default function App() {
   const [diceVariant, setDiceVariant] = useState<Variant>(
     () => (localStorage.getItem("dice-variant") as Variant) || "outline"
   );
-  const [diceColor, setDiceColor] = useState("");
+  const [diceColor, setDiceColor] = useState(
+    () => (localStorage.getItem("dice-color") as string) || ""
+  );
   const [diceSide, setDiceSide] = useState(1);
 
   useEffect(() => {
