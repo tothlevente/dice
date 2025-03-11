@@ -1,21 +1,23 @@
-import VariantToggle from "../variant-toggle";
-import HeaderTitle from "../header-title";
-import ColorToggle from "../color-toggle";
+import VariantToggle from "../themes/VariantToggle";
+import ColorToggle from "../themes/ColorToggle";
+import HeaderTitle from "./HeaderTitle";
 
-import { ModeToggle } from "../mode-toggle";
+import { ModeToggle } from "../themes/ModeToggle";
 import { Variant } from "@/App";
+
+interface Props {
+  variant: Variant;
+  setVariant: React.Dispatch<React.SetStateAction<Variant>>;
+  color: string;
+  setColor: React.Dispatch<React.SetStateAction<string>>;
+}
 
 export default function Header({
   variant,
   setVariant,
   color,
   setColor,
-}: {
-  variant: Variant;
-  setVariant: React.Dispatch<React.SetStateAction<Variant>>;
-  color: string;
-  setColor: React.Dispatch<React.SetStateAction<string>>;
-}) {
+}: Props) {
   return (
     <div className="header">
       <HeaderTitle />

@@ -1,7 +1,15 @@
 import { Button } from "../ui/button";
-
-import Dice from "../dice";
 import { Variant } from "@/App";
+
+import Dice from "./Dice";
+
+interface Props {
+  side: number;
+  rolling: boolean;
+  color: string;
+  variant: Variant;
+  handleRoll: () => void;
+}
 
 export default function Board({
   side,
@@ -9,13 +17,7 @@ export default function Board({
   color,
   variant,
   handleRoll,
-}: {
-  side: number;
-  rolling: boolean;
-  color: string;
-  variant: Variant;
-  handleRoll: () => void;
-}) {
+}: Props) {
   return (
     <div className="board">
       <div className="dice-container">
