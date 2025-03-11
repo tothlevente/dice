@@ -1,5 +1,5 @@
 import { HexColorPicker } from "react-colorful";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 import {
   Popover,
@@ -7,15 +7,14 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-import SwatchBook from "./icons/swatch-book";
+import SwatchBook from "../../assets/icons/swatch-book";
 
-export default function ColorToggle({
-  color,
-  setColor,
-}: {
+interface Props {
   color: string;
   setColor: React.Dispatch<React.SetStateAction<string>>;
-}) {
+}
+
+export default function ColorToggle({ color, setColor }: Props) {
   return (
     <Popover>
       <PopoverTrigger asChild>

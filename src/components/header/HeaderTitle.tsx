@@ -1,4 +1,4 @@
-import Dices from "./icons/dices";
+import Dices from "../../assets/icons/dices";
 
 export default function HeaderTitle() {
   return (

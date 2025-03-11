@@ -1,9 +1,9 @@
-import { ThemeProvider } from "./components/theme-provider";
+import { ThemeProvider } from "./components/themes/ThemeProvider";
 import { useEffect, useState } from "react";
 
-import Footer from "./components/layouts/Footer";
-import Header from "./components/layouts/Header";
-import Board from "./components/layouts/Board";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Board from "./components/board/Board";
 
 export type Variant = "outline" | "filled";
 

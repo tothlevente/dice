@@ -1,16 +1,15 @@
-import DiamondPlus from "./icons/diamond-plus";
-import Diamond from "./icons/diamond";
+import DiamondPlus from "../../assets/icons/diamond-plus";
+import Diamond from "../../assets/icons/diamond";
 
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { Variant } from "@/App";
 
-export default function VariantToggle({
-  variant,
-  setVariant,
-}: {
+interface Props {
   variant: Variant;
   setVariant: React.Dispatch<React.SetStateAction<Variant>>;
-}) {
+}
+
+export default function VariantToggle({ variant, setVariant }: Props) {
   return (
     <>
       {variant === "filled" ? (
