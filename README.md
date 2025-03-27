@@ -1,6 +1,6 @@
 # Dice :game_die:
 
-The digital version of the dice.
+This web application provides a user-friendly digital dice experience. Easily roll a standard six-sided die with a single click. Enhance your experience by personalizing the dice appearance, choosing from a variety of colors and toggling between filled and blank dice styles. Get instant, randomized results from 1 to 6.
 
 ## Available scripts:
 
